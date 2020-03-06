@@ -1,0 +1,20 @@
+{
+  "name": "frontend_env_setting",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jimlee91/frontend_env_setting.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jimlee91/frontend_env_setting/issues"
+  },
+  "homepage": "https://github.com/jimlee91/frontend_env_setting#readme"
+}
