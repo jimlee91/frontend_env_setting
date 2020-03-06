@@ -5,14 +5,23 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
+const apiMocker = require("connect-api-mocker");
+
 module.exports = {
   mode: "development",
   entry: {
-    main: "./app.js"
+    main: "./src/app.js"
   },
   output: {
     path: path.resolve("./dist"),
     filename: "[name].js"
+  },
+  devServer: {
+    overlay: true,
+    stats: "errors-only",
+    before: app => {
+      app.use(apiMocker("/api", "./mocks/api"));
+    }
   },
   module: {
     rules: [

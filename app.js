@@ -1,3 +1,3 @@
-console.log();
+const foo = "";
 
-(function() {})();
+console.log();

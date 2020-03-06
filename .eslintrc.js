@@ -1,9 +1,10 @@
 module.exports = {
   env: {
+    node: true,
     browser: true,
     es6: true
   },
-  extends: "eslint:recommended",
+  extends: ["eslint:recommended", "eslint-config-prettier"],
   globals: {
     Atomics: "readonly",
     SharedArrayBuffer: "readonly"
@@ -12,5 +13,8 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: "module"
   },
-  rules: {}
+  plugins: ["prettier"],
+  rules: {
+    "prettier/prettier": "error"
+  }
 };
